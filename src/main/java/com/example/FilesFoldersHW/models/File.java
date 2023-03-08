@@ -18,7 +18,6 @@ public class File {
     @Column(name = "size")
     private int size;
 
-    @JsonBackReference
     @ManyToOne()
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
@@ -72,3 +71,14 @@ public class File {
         this.folder = folder;
     }
 }
+
+// TO ADD A NEW FILE VIA INSOMNIA:
+//  {
+//        "name": "Photo 1",
+//        "extension": ".jpeg",
+//        "size": 4,
+//        "folder":
+//          {
+//          "id": 1
+//          }
+//  }

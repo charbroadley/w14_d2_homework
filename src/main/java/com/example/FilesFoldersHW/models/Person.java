@@ -15,7 +15,7 @@ public class Person {
     private Long id;
     @Column(name = "name")
     private String name;
-    // @JsonBackReference
+    @JsonBackReference
     @OneToMany(mappedBy = "person")
     @Column(name = "folders")
     private List<Folder> folders;
